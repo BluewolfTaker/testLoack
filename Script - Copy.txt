@@ -1,19 +1,2 @@
         List<Lead_Assignment_Trigger_Rule__c> myList = new List<Lead_Assignment_Trigger_Rule__c>();
-        myList = [Select ID, GBT20__c,Use_Round_Robin__c from Lead_Assignment_Trigger_Rule__c]; 
-        for(Lead_Assignment_Trigger_Rule__c obj : myList )
-        {
-            if (obj.GBT20__c=='BZ700')
-            {
-              System.debug('001GBT20__c'+obj.GBT20__c);      
-              obj.Use_Round_Robin__c  = false;
-            }
-            else
-            {
-              obj.Use_Round_Robin__c  = true;		
-            }           
-        }
- 
-        if(myList.size() > 0)
-        {
-            update myList;
-        }
+       
